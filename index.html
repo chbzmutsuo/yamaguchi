@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cool Yama-guchi</title>
+    <meta name="description" content="This site is a test site.">
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+    <link rel="stylesheet" href="styles/loader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/vendors/pace.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="top-page-container">
+      <!-- header-being -->
+      <header class="header">
+        <div class="header__logo">
+          <img src="images/logo.png" alt="">
+          <span>Hello, Yamaguchi!</span>
+        </div>
+        <nav c1lass="header-nav">
+        </nav>
+        <div class="mobile-menu">
+          <!-- not yet -->
+        </div>
+      </header>
+
+
+
+      <section class="firstsection">
+        <div class="firstsection__texts">
+          <h2>待ちに待った旅行。<br>
+            だけど<br>
+            なんだか、故郷の気分。</h2>
+          <p class="normal-fonts">
+            山口県は、中国地方の西に位置する小さな県。<br>
+            九州への交通の要所でありながら、<br>
+            立ち寄った人々を日本海の海の幸や地酒などでおもてなし。<br>
+            秋吉台や長門大橋などの日本有数の大自然もその魅力の一つ。<br>
+            旅行をしながら、どこか実家にいるような暖かく穏やかな経験をお届けします。<br>
+          </p>
+        </div>
+        <div class="firstsection__img-wrapper">
+          <img src="images/main-visual.JPG" alt="" class="main-img">
+          <a href="" class="btn-black">写真を見る</a>
+          <a href="" class="btn-green">おすすめ旅行プランへ。</a>
+        </div>
+      </section>
+
+
+      <section class="second">
+        <div class="second__img-wrapper">
+          <ul>
+            <li class="second__item SO-object">
+              <img src="images/scenery.JPG"  alt="">
+              <p>秋吉台にて、妻と。</p>
+            </li>
+            <li class="second__item SO-object">
+              <img src="images/shoka-sonjuku-2699325_1280.webp"  alt="">
+              <p>松下村塾。</p>
+            </li>
+            <li class="second__item SO-object">
+              <img src="images/rocks.jpg"  alt="">
+              <p>大自然も魅力の一つ。</p>
+            </li>
+            <li class="second__item SO-object">
+              <img src="images/red-gate.jpg"  alt="">
+              <p>赤い鳥居がランドマーク。元乃隅神社。</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="third SO-object">
+        <div class="third__img-wrapper ">
+          <div class="third__texts">
+            <h3 >またとない観光の機会を「最適化」 <br>
+            「そんな名所知らなかった・・・」となる前に。</h3>
+            <p class="font-sm">地元山口の事情を知り尽くした専門家が、お客様のご希望・ご事情に合わせて最適なプランをカスタマイズいたします。 <br>記念日、お祝い、観光、下見、出張・・・多様な状況に応じて、最適なプランをご用意します。</p>
+          </div>
+          <div class="third__detail">
+            <dl>
+              <dt>
+                <span class="english">Nature</span>
+                <span class="japanese">大自然を満喫</span>
+              </dt>
+              <dd>中心地から少し運転すれば、そこには・・・</dd>
+              <dt>
+                <span class="english">Foods</span>
+                <span class="japanese">海の幸、山の幸</span>
+              </dt>
+              <dd>三方が海。山口の持つ食の底力を知るべし。</dd>
+              <dt>
+                <span class="english">History</span>
+                <span class="japanese">戦、学問、革新</span>
+              </dt>
+              <dd>源平合戦、明治維新の魂がここに。</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="fourth SO-object">
+        <div class="fourth__texts">
+          <h2>Recommend <br> おすすめ</h2>
+          <p>次々に生まれるみんなの事例をチェックして、
+            インスピレーションを膨らませよう。            
+            </p>
+          <a href="#" class="round-btn">旅行プラン一覧</a>
+        </div>
+        <div class="fourth__img-slider">
+          <ul id="fourth_ul">
+            <script>
+
+              const times = ['約2時間','約1時間','約90分','すぐそこ'];
+              const labels = ["観光","観光","料理","料理"]
+              const comments =["絶景の ー角島ー ","唯一無二の写真スポット ー錦帯橋ー ","食べて飲んで、遊んで ー下関ー","山口といえばこれ。 ー瓦そばー"];
+
+              for(i=0;i<4;i++){
+              let li = document.createElement("li");
+              let contents = 
+              `<li>
+                <div class="item ">
+                  <img src="images/fourthImg${i}.jpg" alt="">
+                  <div class="properties">
+                    <div class="time"><span>市内から</span><span>${times[i]}</span></div>
+                  </div>
+                  <p> <span>${comments[i]}</span></p>
+                  <a href="#" class="round-btn tag">${labels[i]}</a>
+                </div>
+              </li>`;
+              li.innerHTML = contents;
+              let ul = document.getElementById("fourth_ul");
+              ul.appendChild(li);
+              }
+            </script>
+            <!-- <li>
+              <div class="item ">
+                <img src="images/scenery3.jpg" alt="">
+                <div class="properties">
+                  <div class="time"><span>市内より</span><span>30分</span></div>
+                  <div class="price"><span>滞在</span><span>120分</span></div>
+                </div>
+                <p> <span>絶景でした。</span></p>
+                <a href="#" class="round-btn tag">shelf</a>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="fifth">
+        <div class="fifth__texts">
+          <h2>It's Now or Never!</h2>
+          <p>自分の好きを見つけよう！</p>
+        </div>
+        <div class="fifth__img-slider">   
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id ="fifth-swiper-wrapper">
+              <!-- Slides -->
+              <script>
+                for(i=0;i<3;i++){
+                  let maintitle_p = ["秋吉台","山口、地鶏","防腐天満宮"];
+                  let subtitle_span =["移動の疲れを癒す自然の絶海","たくさん観光した後に、地鶏が染み渡る","山口に来たら見ておいて損なし！"];
+                  let picNum =["DAY1","DAY2","DAY3"];
+
+                const div = document.createElement("div");
+                div.setAttribute("class", "swiper-slide");
+                let html = 
+                  ` <div class="item">
+                      <img src="images/now_is_the_time${i}.jpg" alt="">
+                      <p class="img-description">${maintitle_p[i]}<br> <span>${subtitle_span[i]}</span></p>
+                      <div class="item-number">${picNum[i]}</div>
+                    </div>`
+                  div.innerHTML = html;
+
+                  let topDiv = document.getElementById("fifth-swiper-wrapper");
+                  topDiv.appendChild(div);
+                }
+              </script>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination" id="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+
+         
+        </div>
+      </section>
+      
+      <section class="sixth">
+        <h2>Support</h2>
+        <div class="sixth__img-wrapper">
+          <div class="item">
+            <img src="images/scenery2.jpeg" alt="">
+            <p>
+              ・観光地を決めきれない。 <br>
+              ・地元の隠れた名店が知りたい。<br>
+              ・宿はどこがおすすめ？ <br><br>
+              あらゆる悩みに、専門のコンサルタントがご相談に乗ります。オンライン相談も可能です。ご気軽にお申し付けください。
+            </p>
+          </div>
+        </div>
+        
+        <div class="round-btn">無料コンサルティングを体験してみる</div>
+      </section>
+
+
+      <footer class="footer">
+        <!-- <div class="footer__media">
+          <h3>Media</h3>
+          <p>クリックすると各記事に飛びます。</p>
+          <div class="icon-wrapper">
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+            <div class="item"><img src="https://via.placeholder.com/70x25" alt=""></div>
+          </div>
+        </div> -->
+        <div class="footer__sns">
+          <div class="sns-icon"><img src="images/facebook.png" alt=""></div>
+          <div class="sns-icon"><img src="images/twitter.png" alt=""></div>
+          <div class="sns-icon"><img src="images/insta.png" alt=""></div>
+          
+        </div>
+        <div class="footer__copyright">&copy;2021 Mutsuo, Inc.</div>
+        <div class="footer__nav">
+        </div>
+      </footer>
+    </div>
+
+    
+
+  
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="scripts/libs/hero-slider.js"></script>
+    <script src="scripts/libs/scroll.js"></script>
+
+
+    <!-- 
+    <script src="scripts/vendors/TweenMax.min.js"></script>
+    <script src="scripts/vendors/scroll-polyfill.js"></script>
+    
+    <script src="scripts/libs/text-animation.js"></script>
+    
+    <script src="scripts/libs/mobile-menu.js"></script> -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
